@@ -1,7 +1,10 @@
--- enable exrc
+-- exrc
 vim.opt.exrc = true
--- disable python3 provider searching
+-- dont search for python
 vim.g.loaded_python3_provider = 0
 
-require("default")
-require("plugins")
+-- leader keys
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+require("config.lazy")
