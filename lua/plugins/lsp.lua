@@ -17,6 +17,8 @@ return {
                 end,
 
                 -- custom handlers
+                -- python
+                ruff = function() end,
                 basedpyright = function()
                     require("lspconfig").basedpyright.setup({
                         capabilities = require("blink.cmp").get_lsp_capabilities(),
@@ -28,6 +30,7 @@ return {
                     })
                 end,
 
+                -- lua
                 lua_ls = function()
                     require("lspconfig").lua_ls.setup({
                         -- ignore global "vim" and dont align tables
@@ -46,6 +49,7 @@ return {
                     })
                 end,
 
+                -- c, cpp
                 clangd = function()
                     require("lspconfig").clangd.setup({
                         capabilities = require("blink.cmp").get_lsp_capabilities(),
