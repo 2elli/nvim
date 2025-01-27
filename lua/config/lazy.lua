@@ -36,6 +36,6 @@ require("lazy").setup({
 })
 
 -- set defaults
-require("config.opts").setup()
-require("config.keymaps").setup()
-require("config.usercmds").setup()
+require("config.opts")
+require("config.keymaps")
+require("config.usercmds")
