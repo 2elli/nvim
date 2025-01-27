@@ -21,6 +21,7 @@ return {
     {
         "chentoast/marks.nvim",
         event = "VeryLazy",
+        opts = {},
         keys = {
             { "<leader>m", "<CMD>MarksListAll<CR>", desc = "List marks" },
         },
@@ -28,6 +29,7 @@ return {
     -- diagnostics
     {
         "folke/trouble.nvim",
+        opts = {},
         cmd = "Trouble",
         keys = {
             { "<leader>xx", "<CMD>Trouble diagnostics toggle filter.buf=0<CR>", desc = "Trouble: diagnostics for local buffer" },
@@ -43,7 +45,8 @@ return {
     -- git actions
     {
         "lewis6991/gitsigns.nvim",
-        event = "VeryLazy",
+        lazy = false,
+        opts = {},
         keys = {
             { "<leader>gg", "<CMD>Gitsigns<CR>", desc = "Gitsigns: menu" },
             { "<leader>gb", "<CMD>Gitsigns blame_line<CR>", desc = "Gitsigns: blame line" },
@@ -56,6 +59,6 @@ return {
     -- other extras
     {
         "folke/snacks.nvim",
-        opts = { indent = { animate = { enabled = true } }, bigfile = {} },
+        opts = { indent = { animate = { enabled = false } }, bigfile = {} },
     },
 }
