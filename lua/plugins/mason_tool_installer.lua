@@ -5,13 +5,15 @@ return {
 
         opts = {
             ensure_installed = {
-                -- formatter
-                "ruff",         -- python
-                "clang-format", -- c, cpp
-                "shfmt",        -- sh, bash
-                -- linting
-                "typos",        -- all
-                "shellcheck",   -- sh, bash
+                -- all
+                "typos",        -- lint
+                -- python
+                "ruff",         -- format and lint
+                -- c, cpp
+                "clang-format", -- format
+                -- sh, bash
+                "shfmt",        -- format
+                "shellcheck",   -- lint
             },
             run_on_start = false,
             integrations = { ["mason-lspconfig"] = false, ["mason-null-ls"] = false, ["mason-nvim-dap"] = false },

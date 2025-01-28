@@ -6,7 +6,7 @@ return {
     {
         "williamboman/mason-lspconfig.nvim",
         opts = {
-            ensure_installed = { "lua_ls", "basedpyright", "bashls", "clangd", "jdtls", "rust_analyzer", "ts_ls", "jsonls" },
+            ensure_installed = { "lua_ls", "basedpyright", "bashls", "clangd", "jdtls", "rust_analyzer", "ts_ls", "jsonls", "zls", "gopls" },
             -- handlers for different lsp's
             handlers = {
                 -- generic handler

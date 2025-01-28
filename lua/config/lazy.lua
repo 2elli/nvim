@@ -39,3 +39,4 @@ require("lazy").setup({
 require("config.opts")
 require("config.keymaps")
 require("config.usercmds")
+require("config.autocmds")
