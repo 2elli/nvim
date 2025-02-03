@@ -7,6 +7,7 @@ return {
             ensure_installed = { "c", "cpp", "python", "lua", "bash", "json" },
             auto_install = true,
             highlight = { enable = true },
+            indent = { enable = true },
         },
     },
 }
