@@ -20,7 +20,9 @@ return {
         },
         cmd = {
             "MasonToolsInstall",
+            "MasonToolsInstallSync",
             "MasonToolsUpdate",
+            "MasonToolsUpdateSync",
             "MasonToolsClean",
         },
     },

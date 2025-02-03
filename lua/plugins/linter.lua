@@ -6,7 +6,6 @@ return {
             linters_by_ft = {
                 sh = { "shellcheck" },
                 bash = { "shellcheck" },
-                python = { "ruff" },
             },
         },
         event = { "BufWritePost", "BufEnter" },

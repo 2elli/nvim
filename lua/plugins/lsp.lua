@@ -6,7 +6,7 @@ return {
     {
         "williamboman/mason-lspconfig.nvim",
         opts = {
-            ensure_installed = { "lua_ls", "basedpyright", "bashls", "clangd", "jdtls", "rust_analyzer", "ts_ls", "jsonls", "zls", "gopls" },
+            ensure_installed = { "lua_ls", "basedpyright", "ruff", "bashls", "clangd", "jdtls", "rust_analyzer", "ts_ls", "jsonls", "zls", "gopls" },
             -- handlers for different lsp's
             handlers = {
                 -- generic handler
@@ -18,13 +18,28 @@ return {
 
                 -- custom handlers
                 -- python
-                ruff = function() end,
+                ruff = function()
+                    require("lspconfig").ruff.setup({
+                        capabilities = require("blink.cmp").get_lsp_capabilities(),
+                        init_options = { settings = { lineLength = 240 } },
+                        on_attach = function(client)
+                            client.server_capabilities.hoverProvider = false
+                        end,
+                    })
+                end,
                 basedpyright = function()
                     require("lspconfig").basedpyright.setup({
                         capabilities = require("blink.cmp").get_lsp_capabilities(),
                         settings = {
                             basedpyright = {
-                                analysis = { typeCheckingMode = "basic" },
+                                analysis = {
+                                    typeCheckingMode = "standard",
+                                    useLibraryCodeForTypes = true,
+                                    autoSearchPaths = true,
+                                    autoImportCompletions = true,
+                                },
+                                disableOrganizeImports = true,
+                                disableTaggedHints = false,
                             },
                         },
                     })
