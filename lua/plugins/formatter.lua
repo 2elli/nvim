@@ -22,7 +22,7 @@ return {
             {
                 "<leader>lf",
                 function() require("conform").format({ async = true }) end,
-                mode = { "n", "v", "i" },
+                mode = { "n", "v" },
                 desc = "Conform: Format",
             },
         },
