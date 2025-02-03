@@ -19,7 +19,12 @@ return {
         },
         cmd = { "ConformInfo" },
         keys = {
-            { "<leader>lf", function() require("conform").format({ async = true }) end, mode = "", desc = "Conform: Format" },
+            {
+                "<leader>lf",
+                function() require("conform").format({ async = true }) end,
+                mode = { "n", "v", "i" },
+                desc = "Conform: Format",
+            },
         },
     },
     { "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
