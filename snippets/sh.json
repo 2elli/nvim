@@ -1,0 +1,9 @@
+{
+  "script dir + cd script dir": {
+    "body": "cd \"\\$(dirname \"\\$0\")\" || exit 1",
+    "prefix": [
+      "scriptdir",
+      "cdscriptdir"
+    ]
+  }
+}
