@@ -11,9 +11,9 @@ return {
             handlers = {
                 -- generic handler
                 function(server_name)
-                    require("lspconfig")[server_name].setup(
-                        { capabilities = require("blink.cmp").get_lsp_capabilities() }
-                    )
+                    require("lspconfig")[server_name].setup({
+                        capabilities = require("blink.cmp").get_lsp_capabilities(),
+                    })
                 end,
 
                 -- custom handlers

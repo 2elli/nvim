@@ -17,6 +17,24 @@ return {
             { "<leader>sl", "<CMD>SessionLoadLast<CR>", desc = "Persisted: load last session" },
         },
     },
+    -- create annotations
+    {
+        "danymat/neogen",
+        opts = {
+            languages = {
+                python = { template = { annotation_convention = "reST" } },
+                lua = { template = { annotation_convention = "emmylua" } },
+            },
+        },
+        cmd = "Neogen",
+        keys = {
+            {
+                "<leader>ng",
+                function() require("neogen").generate() end,
+                desc = "Neogen: generate annotations",
+            },
+        },
+    },
     -- marks
     {
         "chentoast/marks.nvim",
@@ -55,6 +73,12 @@ return {
             { "<leader>gn", "<CMD>Gitsigns next_hunk<CR>", desc = "Gitsigns: goto next hunk" },
             { "<leader>gp", "<CMD>Gitsigns prev_hunk<CR>", desc = "Gitsigns: goto prev hunk" },
         },
+    },
+    -- view keymaps used visually
+    {
+        "meznaric/key-analyzer.nvim",
+        opts = {},
+        cmd = { "KeyAnalyzer" },
     },
     -- other extras
     {
