@@ -17,7 +17,7 @@ return {
             { "<leader>sl", "<CMD>SessionLoadLast<CR>", desc = "Persisted: load last session" },
         },
     },
-    -- create annotations
+    -- auto create annotations
     {
         "danymat/neogen",
         opts = {
@@ -33,15 +33,6 @@ return {
                 function() require("neogen").generate() end,
                 desc = "Neogen: generate annotations",
             },
-        },
-    },
-    -- marks
-    {
-        "chentoast/marks.nvim",
-        event = "VeryLazy",
-        opts = {},
-        keys = {
-            { "<leader>m", "<CMD>MarksListAll<CR>", desc = "List marks" },
         },
     },
     -- diagnostics
@@ -80,7 +71,7 @@ return {
         opts = {},
         cmd = { "KeyAnalyzer" },
     },
-    -- other extras
+    -- indent lines and disable some features for big files 1.5MB i think
     {
         "folke/snacks.nvim",
         opts = { indent = { animate = { enabled = false } }, bigfile = {} },
