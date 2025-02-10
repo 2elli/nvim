@@ -65,6 +65,11 @@ return {
             { "<leader>gp", "<CMD>Gitsigns prev_hunk<CR>", desc = "Gitsigns: goto prev hunk" },
         },
     },
+    -- better general text writing
+    {
+        "preservim/vim-pencil",
+        cmd = "Pencil"
+    },
     -- view keymaps used visually
     {
         "meznaric/key-analyzer.nvim",
