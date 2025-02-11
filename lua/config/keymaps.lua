@@ -1,6 +1,5 @@
 -- default keymaps
 vim.keymap.set("n", "<SPACE>", "<Nop>", { desc = "nop leader key" })
-vim.keymap.set("n", "<leader>w", "<CMD>w<CR>", { desc = "save buf" })
 -- keep page dwn + up centered
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "center page up" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "center page down" })
