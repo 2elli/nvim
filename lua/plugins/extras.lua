@@ -33,6 +33,17 @@ return {
                 function() require("neogen").generate() end,
                 desc = "Neogen: generate annotations",
             },
+            {
+                "<leader>ns",
+                function()
+                    vim.ui.select({ "class", "type", "file", "func" }, {
+                        prompt = "Neogen: Select type of annotation",
+                    }, function(choice)
+                        require("neogen").generate({ type = choice })
+                    end)
+                end,
+                desc = "Neogen: select annotation to create",
+            },
         },
     },
     -- diagnostics
@@ -68,7 +79,7 @@ return {
     -- better general text writing
     {
         "preservim/vim-pencil",
-        cmd = "Pencil"
+        cmd = "Pencil",
     },
     -- view keymaps used visually
     {
