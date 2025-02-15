@@ -45,7 +45,12 @@ return {
                 ruff = function()
                     require("lspconfig").ruff.setup({
                         capabilities = require("blink.cmp").get_lsp_capabilities(),
-                        init_options = { settings = { lineLength = 240 } },
+                        init_options = {
+                            settings = {
+                                configurationPreference = "filesystemFirst",
+                                lineLength = 240,
+                            }
+                        },
                         on_attach = function(client)
                             client.server_capabilities.hoverProvider = false
                         end,
