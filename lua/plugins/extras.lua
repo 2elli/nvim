@@ -80,7 +80,7 @@ return {
             { "<leader>gd", "<CMD>vert rightb Gitsigns diffthis<CR>", desc = "Gitsigns: open git diff" },
             { "<leader>gn", "<CMD>Gitsigns next_hunk<CR>", desc = "Gitsigns: goto next hunk" },
             { "<leader>gp", "<CMD>Gitsigns prev_hunk<CR>", desc = "Gitsigns: goto prev hunk" },
-            { "<leader>gp", "<CMD>Gitsigns reset_hunk<CR>", desc = "Gitsigns: reset hunk" },
+            { "<leader>gr", "<CMD>Gitsigns reset_hunk<CR>", desc = "Gitsigns: reset hunk" },
         },
     },
     -- view keymaps used visually
