@@ -46,6 +46,12 @@ return {
             },
         },
     },
+    -- navigate buffer
+    {
+        "bassamsdata/namu.nvim",
+        opts = { namu_symbols = { enable = true } },
+        keys = { { "<leader>nn", "<CMD>Namu symbols<CR>", desc = "Namu: navigate symbols" } },
+    },
     -- diagnostics
     {
         "folke/trouble.nvim",
@@ -74,6 +80,7 @@ return {
             { "<leader>gd", "<CMD>vert rightb Gitsigns diffthis<CR>", desc = "Gitsigns: open git diff" },
             { "<leader>gn", "<CMD>Gitsigns next_hunk<CR>", desc = "Gitsigns: goto next hunk" },
             { "<leader>gp", "<CMD>Gitsigns prev_hunk<CR>", desc = "Gitsigns: goto prev hunk" },
+            { "<leader>gp", "<CMD>Gitsigns reset_hunk<CR>", desc = "Gitsigns: reset hunk" },
         },
     },
     -- better general text writing
@@ -85,7 +92,7 @@ return {
     {
         "meznaric/key-analyzer.nvim",
         opts = {},
-        cmd = { "KeyAnalyzer" },
+        cmd = "KeyAnalyzer",
     },
     -- indent lines and disable some features for big files 1.5MB i think
     {
