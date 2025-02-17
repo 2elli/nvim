@@ -31,7 +31,7 @@ return {
                 -- json
                 "jsonls",
                 -- toml
-                "taplo"
+                "taplo",
             },
             -- handlers for different lsp's
             handlers = {
@@ -51,7 +51,7 @@ return {
                             settings = {
                                 configurationPreference = "filesystemFirst",
                                 lineLength = 240,
-                            }
+                            },
                         },
                         on_attach = function(client)
                             client.server_capabilities.hoverProvider = false
@@ -105,6 +105,15 @@ return {
                             client.server_capabilities.documentFormattingRangeProvider = false
                         end,
                         cmd = { "clangd", "--offset-encoding=utf-16" },
+                    })
+                end,
+
+                -- typst
+                tinymist = function()
+                    require("lspconfig").tinymist.setup({
+                        settings = {
+                            formatterMode = "typstyle",
+                        },
                     })
                 end,
             },

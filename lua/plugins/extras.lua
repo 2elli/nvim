@@ -83,11 +83,6 @@ return {
             { "<leader>gp", "<CMD>Gitsigns reset_hunk<CR>", desc = "Gitsigns: reset hunk" },
         },
     },
-    -- better general text writing
-    {
-        "preservim/vim-pencil",
-        cmd = "Pencil",
-    },
     -- view keymaps used visually
     {
         "meznaric/key-analyzer.nvim",
