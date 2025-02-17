@@ -7,8 +7,6 @@ return {
             ensure_installed = {
                 -- all
                 "typos",        -- lint
-                -- python
-                "ruff",         -- format and lint
                 -- c, cpp
                 "clang-format", -- format
                 -- sh, bash

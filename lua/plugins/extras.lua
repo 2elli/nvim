@@ -62,12 +62,6 @@ return {
             { "<leader>xX", "<CMD>Trouble diagnostics toggle<CR>", desc = "Trouble: diagnostics for working dir" },
         },
     },
-    -- undotree
-    {
-        "mbbill/undotree",
-        cmd = "UndotreeToggle",
-        keys = { { "<leader>u", "<CMD>UndotreeToggle<CR>", desc = "toggle undotree menu" } },
-    },
     -- git actions
     {
         "lewis6991/gitsigns.nvim",
@@ -89,9 +83,39 @@ return {
         opts = {},
         cmd = "KeyAnalyzer",
     },
-    -- indent lines and disable some features for big files 1.5MB i think
+    -- misc
     {
         "folke/snacks.nvim",
-        opts = { indent = { animate = { enabled = false } }, bigfile = {} },
+        priority = 1000, -- load first
+        lazy = false,
+        opts = {
+            -- indent lines
+            indent = { animate = { enabled = false } },
+            -- disable some features for big files 1.5MB i think
+            bigfile = { enabled = true },
+            -- undo tree
+            picker = { enabled = true },
+        },
+        config = function(_, opts)
+            -- setup
+            require("snacks").setup(opts)
+
+            -- make debug helpers
+            _G.dd = function(...) Snacks.debug.inspect(...) end
+            _G.bt = function() Snacks.debug.backtrace() end
+
+            -- lsp file rename for oil
+            vim.api.nvim_create_autocmd("User", {
+                pattern = "OilActionsPost",
+                callback = function(event)
+                    if event.data.actions.type == "move" then
+                        Snacks.rename.on_rename_file(event.data.actions.src_url, event.data.actions.dest_url)
+                    end
+                end,
+            })
+        end,
+        keys = {
+            { "<leader>u", function() Snacks.picker.undo() end, desc = "Undo Tree" },
+        },
     },
 }
