@@ -26,6 +26,8 @@ return {
                 "zls",
                 -- go
                 "gopls",
+                -- typst
+                "tinymist",
                 -- json
                 "jsonls",
                 -- toml
