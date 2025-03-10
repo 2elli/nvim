@@ -46,12 +46,6 @@ return {
             },
         },
     },
-    -- navigate buffer
-    {
-        "bassamsdata/namu.nvim",
-        opts = { namu_symbols = { enable = true } },
-        keys = { { "<leader>nn", "<CMD>Namu symbols<CR>", desc = "Namu: navigate symbols" } },
-    },
     -- diagnostics
     {
         "folke/trouble.nvim",
@@ -76,12 +70,6 @@ return {
             { "<leader>gp", "<CMD>Gitsigns prev_hunk<CR>", desc = "Gitsigns: goto prev hunk" },
             { "<leader>gr", "<CMD>Gitsigns reset_hunk<CR>", desc = "Gitsigns: reset hunk" },
         },
-    },
-    -- view keymaps used visually
-    {
-        "meznaric/key-analyzer.nvim",
-        opts = {},
-        cmd = "KeyAnalyzer",
     },
     -- misc
     {
