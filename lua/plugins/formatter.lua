@@ -8,6 +8,7 @@ return {
                 cpp = { "clangformat" },
                 sh = { "shfmt" },
                 bash = { "shfmt" },
+                zsh = { "beautysh" },
             },
             formatters = {
                 clangformat = {
