@@ -13,10 +13,10 @@ return {
             require("harpoon"):setup(opts)
         end,
         keys = {
-            { "<leader>a", function() require("harpoon"):list():add() end, desc = "Harpoon: add file to list" },
-            { "<leader>f", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end, desc = "Harpoon: toggle quick menu" },
-            { "<C-n>", function() require("harpoon"):list():next() end, desc = "Harpoon: goto next mark" },
-            { "<C-p>", function() require("harpoon"):list():prev() end, desc = "Harpoon: goto previous mark" },
+            { "<leader>fa", function() require("harpoon"):list():add() end, desc = "Harpoon: add file to list" },
+            { "<leader>fl", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end, desc = "Harpoon: toggle quick menu" },
+            { "<leader>fn", function() require("harpoon"):list():next() end, desc = "Harpoon: goto next mark" },
+            { "<leader>fp", function() require("harpoon"):list():prev() end, desc = "Harpoon: goto previous mark" },
         },
     },
     -- file tree
