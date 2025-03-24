@@ -56,7 +56,9 @@ return {
             { "<leader>xX", "<CMD>Trouble diagnostics toggle<CR>", desc = "Trouble: diagnostics for working dir" },
         },
     },
-    -- git actions
+    -- highlight and list TODOs
+    { "folke/todo-comments.nvim", opts = {} },
+    -- git
     {
         "lewis6991/gitsigns.nvim",
         lazy = false,
