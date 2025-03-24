@@ -1,3 +1,6 @@
+-- options
+-- auto loaded in config/lazy.lua
+
 -- line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
