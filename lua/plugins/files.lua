@@ -26,7 +26,10 @@ return {
         opts = {
             skip_confirm_for_simple_edits = true,
             view_options = { show_hidden = true },
-            keymaps = { ["q"] = { "actions.close", mode = "n" } },
+            keymaps = {
+               ["q"] = { "actions.close", mode = "n" },
+               ["<ESC>"] = { "actions.close", mode = "n" },
+            },
         },
         keys = { { "<leader>e", function() require("oil").toggle_float() end, desc = "Oil: toggle browser" } },
     },

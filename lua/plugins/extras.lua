@@ -12,9 +12,9 @@ return {
         },
         keys = {
             { "<leader>sw", "<CMD>SessionSave<CR>", desc = "Persisted: save current session" },
-            { "<leader>ss", "<CMD>Telescope persisted<CR>", desc = "Persisted: list sessions" },
+            { "<leader>sl", "<CMD>Telescope persisted<CR>", desc = "Persisted: list sessions" },
             { "<leader>sc", "<CMD>SessionLoad<CR>", desc = "Persisted: load session from current dir" },
-            { "<leader>sl", "<CMD>SessionLoadLast<CR>", desc = "Persisted: load last session" },
+            { "<leader>sp", "<CMD>SessionLoadLast<CR>", desc = "Persisted: load previous session" },
         },
     },
     -- auto create annotations
