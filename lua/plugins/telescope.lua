@@ -20,7 +20,7 @@ return {
             { "<leader>tq", function() require("telescope.builtin").quickfix() end, desc = "Telescope: quickfix" },
             { "<leader>tj", function() require("telescope.builtin").jumplist() end, desc = "Telescope: jumplist" },
             { "<leader>tb", function() require("telescope.builtin").buffers() end, desc = "Telescope: buffers" },
-            { "<leader>t\"", function() require("telescope.builtin").register() end, desc = "Telescope: registers" },
+            { "<leader>t\"", function() require("telescope.builtin").registers() end, desc = "Telescope: registers" },
         },
     },
 }
