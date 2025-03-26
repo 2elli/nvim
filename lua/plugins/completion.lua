@@ -8,7 +8,6 @@ return {
                 default = { "lazydev", "snippets", "lsp", "path", "buffer" },
                 providers = { lazydev = { name = "LazyDev", module = "lazydev.integrations.blink", score_offset = 100 } },
             },
-            appearance = { nerd_font_variant = "mono" },
             signature = { enabled = true }, -- show signature help
             completion = {
                 -- show lsp docs of option
