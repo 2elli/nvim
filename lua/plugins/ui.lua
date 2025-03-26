@@ -1,16 +1,6 @@
 return {
     -- highlight text under cursor and navigate references
-    {
-        "RRethy/vim-illuminate",
-        lazy = false,
-        config = function()
-            require("illuminate").configure({ disable_keymaps = true })
-        end,
-        keys = {
-            { "<C-n>", function() require("illuminate").goto_next_reference() end, desc = "Goto next reference" },
-            { "<C-p>", function() require("illuminate").goto_prev_reference() end, desc = "Goto prev reference" },
-        },
-    },
+    { "RRethy/vim-illuminate" },
     -- lsp progress notifs
     { "j-hui/fidget.nvim", opts = {} },
     -- better ui components
