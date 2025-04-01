@@ -2,7 +2,7 @@
   "argparse": {
     "body": [
       "parser = argparse.ArgumentParser(prog=\"${TM_FILENAME_BASE:program}\")",
-      "parser.add_argument(\"${1:filename}\")",
+      "parser.add_argument(\"${1:filename}\", type=Path)",
       "args = parser.parse_args()"
     ],
     "prefix": "argparse"
