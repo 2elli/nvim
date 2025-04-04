@@ -7,4 +7,4 @@ some other things prolly
 ```
 
 ### Installation
-`git clone git@github.com:2elli/nvim.git ~/.config/nvim`
+`git clone https://github.com/2elli/nvim.git ~/.config/nvim`
