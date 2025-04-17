@@ -13,7 +13,7 @@ return {
             -- set linters for all ft
             require("lint").linters_by_ft = opts.linters_by_ft
 
-            -- autocmd show lint diagnostics
+            -- autocmd try run linters
             vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter" }, {
                 callback = function()
                     local lint = require("lint")

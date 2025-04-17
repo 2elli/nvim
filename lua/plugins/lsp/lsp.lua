@@ -2,37 +2,9 @@ return {
     -- lsp
     { "SmiteshP/nvim-navic" },
     { "neovim/nvim-lspconfig" },
-    { "williamboman/mason.nvim", opts = {} },
     {
         "williamboman/mason-lspconfig.nvim",
         opts = {
-            ensure_installed = {
-                -- lua
-                "lua_ls",
-                -- python
-                "basedpyright",
-                "ruff",
-                -- sh
-                "bashls",
-                -- c / c++
-                "clangd",
-                -- java
-                "jdtls",
-                -- rust
-                "rust_analyzer",
-                -- ts and js
-                "ts_ls",
-                -- zig
-                "zls",
-                -- go
-                "gopls",
-                -- typst
-                "tinymist",
-                -- json
-                "jsonls",
-                -- toml
-                "taplo",
-            },
             -- handlers for different lsp's
             handlers = {
                 -- generic handler
@@ -122,15 +94,14 @@ return {
             -- setup lsp
             require("mason-lspconfig").setup(opts)
 
-            -- setup lsp keybinds and navic status
+            -- setup lsp keybinds and navic status on lsp attach to buffer
             vim.api.nvim_create_autocmd("LspAttach", {
                 desc = "LSP actions and keymaps",
                 callback = function(event)
                     local client = vim.lsp.get_client_by_id(event.data.client_id)
-                    local bufnr = event.buf
 
                     -- wrappers to make keymaps
-                    local opt = function(desc) return { desc = desc, buffer = bufnr } end
+                    local opt = function(desc) return { desc = desc, buffer = event.buf } end
                     local set = vim.keymap.set
 
                     -- set keymaps
@@ -146,7 +117,7 @@ return {
 
                     -- add navic status
                     if client ~= nil and client.server_capabilities.documentSymbolProvider then
-                        require("nvim-navic").attach(client, bufnr)
+                        require("nvim-navic").attach(client, event.buf)
                         vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
                     end
                 end,

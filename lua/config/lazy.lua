@@ -21,6 +21,7 @@ require("lazy").setup({
     spec = {
         { import = "plugins.dependencies" },
         { import = "plugins" },
+        { import = "plugins.lsp" },
         {
             "folke/lazydev.nvim",
             ft = "lua", -- only load on lua files
