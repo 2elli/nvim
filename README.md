@@ -1,10 +1,13 @@
 ### Requirements
 ```
-cmake
+git
+make
 fd
+fzf
 ripgrep
-some other things prolly
+tree-sitter-cli
+# some other things prolly
 ```
 
 ### Installation
-`git clone https://github.com/2elli/nvim.git ~/.config/nvim`
+`git clone https://github.com/2elli/nvim.git ~/.config/nvim --depth=1`
