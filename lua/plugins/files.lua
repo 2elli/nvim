@@ -15,8 +15,8 @@ return {
         keys = {
             { "<leader>a", function() require("harpoon"):list():add() end, desc = "Harpoon: add file to list" },
             { "<leader>f", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end, desc = "Harpoon: toggle quick menu" },
-            { "<leader>hn", function() require("harpoon"):list():next() end, desc = "Harpoon: goto next mark" },
-            { "<leader>hp", function() require("harpoon"):list():prev() end, desc = "Harpoon: goto previous mark" },
+            { "<C-n>", function() require("harpoon"):list():next() end, desc = "Harpoon: goto next mark" },
+            { "<C-p>", function() require("harpoon"):list():prev() end, desc = "Harpoon: goto previous mark" },
         },
     },
     -- file tree
@@ -27,7 +27,6 @@ return {
             skip_confirm_for_simple_edits = true,
             view_options = { show_hidden = true },
             keymaps = {
-               ["q"] = { "actions.close", mode = "n" },
                ["<ESC>"] = { "actions.close", mode = "n" },
             },
         },
