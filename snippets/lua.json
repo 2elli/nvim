@@ -1,1 +1,32 @@
-[]
+{
+  "user_command + usercommand + nvim_create_user_command": {
+    "body": [
+      "vim.api.nvim_create_user_command(",
+      "    \"$0\",",
+      "    function()",
+      "        $1",
+      "    end,",
+      "    {}",
+      ")"
+    ],
+    "prefix": [
+      "user_command",
+      "usercommand",
+      "nvim_create_user_command"
+    ]
+  },
+  "usercommand + usrcmd": {
+    "body": [
+      "vim.api.nvim_create_autocmd(\"$0\", {",
+      "    desc = \"$1\",",
+      "    group = vim.api.nvim_create_augroup(\"$2\", {}),",
+      "    callback = $3,",
+      "})"
+    ],
+    "prefix": [
+      "autocommand",
+      "autocmd",
+      "create_autocmd"
+    ]
+  }
+}
