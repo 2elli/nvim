@@ -24,6 +24,41 @@ return {
                 component_separators = { left = "|", right = "|" },
                 section_separators = { left = "", right = "" },
             },
+            sections = {
+                lualine_a = { "mode" },
+                lualine_b = { "branch", "diff", "diagnostics" },
+                lualine_c = { "filename" },
+                lualine_x = { "lsp_status" },
+                lualine_y = { "encoding", "fileformat", "filetype" },
+                lualine_z = { "progress", "location" },
+            },
+            inactive_sections = {
+                lualine_a = {},
+                lualine_b = {},
+                lualine_c = { "filename" },
+                lualine_x = { "location" },
+                lualine_y = {},
+                lualine_z = {},
+            },
         },
+        config = function(_, opts)
+            -- custom components
+            -- vim-pencil status
+            local pencil_status = function()
+                if require("lazy.core.config").plugins["vim-pencil"]._.loaded then
+                    return vim.api.nvim_call_function("PencilMode", {})
+                else
+                    return ""
+                end
+            end
+
+            -- add custom components to lualine_x
+            opts.sections.lualine_x = {
+                pencil_status,
+                unpack(opts.sections.lualine_x),
+            }
+
+            require("lualine").setup(opts)
+        end,
     },
 }
