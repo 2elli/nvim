@@ -2,7 +2,14 @@ return {
     -- better general text writing
     {
         "preservim/vim-pencil",
-        cmd = "Pencil",
+        cmd = {
+            "Pencil",
+            "PencilToggle",
+        },
+        init = function()
+            vim.g["pencil#wrapModeDefault"] = "soft"
+            vim.g["pencil#mode_indicators"] = { hard = "󰏫 H", auto = "󰏫 A", soft = "󰏫 S", off = "" }
+        end,
     },
     -- live typst preview
     {
