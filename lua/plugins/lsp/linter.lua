@@ -28,13 +28,8 @@ return {
 
             -- usercmd get available linters
             vim.api.nvim_create_user_command("Linters", function()
-                local linters = {}
-                linters.file = require("lint").linters_by_ft[vim.bo.filetype] or nil
-                linters.global = opts.global_linters or nil
-
-                local fmt_file = "File: " .. (linters.file and table.concat(linters.file, " ") or "No linters")
-                local fmt_global = "Global: " .. (linters.global and table.concat(linters.global, " ") or "No linters")
-                vim.print(fmt_file .. ", " .. fmt_global)
+                local linters = require("lint").get_running(vim.fn.bufnr())
+                vim.print(table.concat(linters, ", "))
             end, {})
         end,
     },
