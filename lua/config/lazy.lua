@@ -41,3 +41,6 @@ require("config.opts")
 require("config.keymaps")
 require("config.usercmds")
 require("config.autocmds")
+
+-- enable lsp servers
+require("lsp").enable_servers()
