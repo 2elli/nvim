@@ -22,7 +22,9 @@ return {
                     lint.try_lint()
 
                     -- try lint with global linters
-                    lint.try_lint(opts.global_linters or {})
+                    if opts.global_linters ~= nil then
+                        lint.try_lint(opts.global_linters)
+                    end
                 end,
             })
 
