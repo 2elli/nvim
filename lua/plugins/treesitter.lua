@@ -1,4 +1,5 @@
 return {
+    -- treesitter
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -8,6 +9,35 @@ return {
             auto_install = true,
             highlight = { enable = true },
             indent = { enable = true },
+        },
+    },
+    -- create annotations with treesitter
+    {
+        "danymat/neogen",
+        opts = {
+            languages = {
+                python = { template = { annotation_convention = "reST" } },
+                lua = { template = { annotation_convention = "emmylua" } },
+            },
+        },
+        cmd = "Neogen",
+        keys = {
+            {
+                "<leader>ng",
+                function() require("neogen").generate() end,
+                desc = "Neogen: generate annotations",
+            },
+            {
+                "<leader>ns",
+                function()
+                    vim.ui.select({ "class", "type", "file", "func" }, {
+                        prompt = "Neogen: Select type of annotation",
+                    }, function(choice)
+                        require("neogen").generate({ type = choice })
+                    end)
+                end,
+                desc = "Neogen: select annotation to create",
+            },
         },
     },
 }
