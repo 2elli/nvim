@@ -2,7 +2,7 @@ return {
     {
         "stevearc/conform.nvim",
         opts = {
-            default_format_opts = { lsp_format = "fallback" },
+            default_format_opts = { lsp_format = "fallback", async = true },
             formatters_by_ft = {
                 c = { "clangformat" },
                 cpp = { "clangformat" },
@@ -21,7 +21,7 @@ return {
         keys = {
             {
                 "<leader>lf",
-                function() require("conform").format({ async = true }) end,
+                function() require("conform").format() end,
                 mode = { "n", "v" },
                 desc = "Conform: Format",
             },
