@@ -1,6 +1,4 @@
-local M = {}
-
-M.servers = {
+local lsp_servers = {
     -- lua
     "lua_ls",
     -- python
@@ -31,8 +29,4 @@ M.servers = {
     "taplo",
 }
 
-M.enable_servers = function()
-    vim.lsp.enable(M.servers)
-end
-
-return M
+vim.lsp.enable(lsp_servers)
