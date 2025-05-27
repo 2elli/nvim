@@ -2,10 +2,9 @@ return {
     -- treesitter
     {
         "nvim-treesitter/nvim-treesitter",
+        branch = "main",
         build = ":TSUpdate",
-        main = "nvim-treesitter.configs",
         opts = {
-            ensure_installed = { "c", "cpp", "python", "lua", "bash", "json" },
             auto_install = true,
             highlight = { enable = true },
             indent = { enable = true },
