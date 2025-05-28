@@ -2,9 +2,9 @@
   "user_command + usercommand + nvim_create_user_command": {
     "body": [
       "vim.api.nvim_create_user_command(",
-      "    \"$0\",",
+      "    \"$1\",",
       "    function()",
-      "        $1",
+      "        $2",
       "    end,",
       "    {}",
       ")"
