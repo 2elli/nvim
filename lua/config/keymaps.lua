@@ -27,3 +27,6 @@ vim.keymap.set("n", "<M-J>", "mzj:m .-2<CR>==J`z", { desc = "append current line
 
 -- delete without copying to register
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "delete without copying to register" })
+
+-- lsp
+vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, {desc = "Lsp: Hover"})
