@@ -32,7 +32,7 @@ return {
                     end
                 end,
             })
-        end
+        end,
     },
     -- better status line
     {
@@ -78,5 +78,12 @@ return {
 
             require("lualine").setup(opts)
         end,
+    },
+    -- key helper
+    {
+        "m4xshen/hardtime.nvim",
+        lazy = false,
+        dependencies = { "MunifTanjim/nui.nvim" },
+        opts = {},
     },
 }
