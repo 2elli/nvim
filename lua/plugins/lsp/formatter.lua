@@ -9,6 +9,7 @@ return {
                 sh = { "shfmt" },
                 bash = { "shfmt" },
                 zsh = { "beautysh" },
+                tex = { "tex-fmt" },
             },
             formatters = {
                 clangformat = {

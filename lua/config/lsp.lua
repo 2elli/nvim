@@ -6,8 +6,6 @@ local lsp_servers = {
     "ruff",
     -- c, c++
     "clangd",
-    -- typst
-    "tinymist",
     -- bash
     "bashls",
     -- js, ts
@@ -20,6 +18,11 @@ local lsp_servers = {
     "gopls",
     -- zig
     "zls",
+
+    -- typst
+    "tinymist",
+    -- latex
+    "texlab",
 
     -- json
     "jsonls",
