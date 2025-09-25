@@ -11,7 +11,7 @@ return {
             signature = { enabled = true }, -- show signature help
             completion = {
                 -- show lsp docs of option
-                documentation = { auto_show = true, auto_show_delay_ms = 0 },
+                documentation = { auto_show = true, auto_show_delay_ms = 50 },
                 -- list selection behavior
                 list = { selection = { preselect = false, auto_insert = false } },
                 -- menu appearance
@@ -22,11 +22,8 @@ return {
                 preset = "default",
                 -- add "super-tab" like actions
                 ["<CR>"] = { "accept", "fallback" },
-                ["<Tab>"] = { "select_next", "fallback" },
-                ["<S-Tab>"] = { "select_prev", "fallback" },
-                -- goto next placeholder in current snippet
-                ["<M-Tab>"] = { "snippet_forward", "fallback" },
-                ["<M-S-Tab>"] = { "snippet_backward", "fallback" },
+                ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+                ["<S-Tab>"] = { "select_prev", "snippet_forward", "fallback" },
                 -- remap doc scroll so binds work with tmux
                 ["<C-u>"] = { "scroll_documentation_up", "fallback" },
                 ["<C-d>"] = { "scroll_documentation_down", "fallback" },
