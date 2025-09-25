@@ -13,6 +13,12 @@ return {
             indent = { enable = true },
         },
     },
+    -- better comments
+    {
+        "folke/ts-comments.nvim",
+        opts = {},
+        event = "VeryLazy",
+    },
     -- create annotations with treesitter
     {
         "danymat/neogen",
