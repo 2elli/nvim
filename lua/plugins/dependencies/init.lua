@@ -16,6 +16,8 @@ return {
             bigfile = { enabled = true },
             -- undo tree
             picker = { enabled = true },
+            -- input ui
+            input = { enabled = true },
         },
         config = function(_, opts)
             -- setup

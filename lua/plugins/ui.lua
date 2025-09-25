@@ -1,12 +1,10 @@
 return {
     -- highlight text under cursor and navigate references
     { "RRethy/vim-illuminate" },
-    -- lsp progress notifs
-    { "j-hui/fidget.nvim", opts = {} },
-    -- better ui components
-    { "stevearc/dressing.nvim", opts = {} },
     -- animate cursor
     { "sphamba/smear-cursor.nvim", opts = { stiffness = 0.8, trailing_stiffness = 0.5, distance_stop_animating = 0.5, hide_target_hack = false } },
+    -- notif ui and lsp progress
+    { "j-hui/fidget.nvim", opts = { notification = { override_vim_notify = true } } },
     -- show marks in gutter, also menu for marks
     {
         "chentoast/marks.nvim",
