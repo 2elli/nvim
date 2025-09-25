@@ -34,6 +34,11 @@ return {
         },
     },
     {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {},
+    },
+    {
         "chrisgrieser/nvim-scissors",
         opts = {
             snippetDir = vim.fn.expand(vim.fn.stdpath("config") .. "/snippets/"),
