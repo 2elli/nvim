@@ -1,13 +1,14 @@
-### Requirements
+# Requirements
 ```
+neovim v0.11+
 git
 make
 fd
 fzf
 ripgrep
 tree-sitter-cli
-# some other things prolly
+jq
 ```
 
-### Installation
+# Installation
 `git clone https://github.com/2elli/nvim.git ~/.config/nvim --depth=1`
