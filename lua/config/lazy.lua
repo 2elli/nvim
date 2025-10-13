@@ -43,4 +43,4 @@ require("config.usercmds")
 require("config.autocmds")
 
 -- enable lsp servers
-require("config.lsp")
+require("lsp").enable_lsp_servers()

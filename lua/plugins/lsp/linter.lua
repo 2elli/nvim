@@ -2,11 +2,12 @@ return {
     {
         "mfussenegger/nvim-lint",
         opts = {
-            global_linters = { "typos" },
-            linters_by_ft = {
-                sh = { "shellcheck" },
-                bash = { "shellcheck" },
-            },
+            global_linters = require("lsp").global_linters,
+            linters_by_ft = require("lsp").linters_by_ft,
+            -- linters_by_ft = {
+            --     sh = { "shellcheck" },
+            --     bash = { "shellcheck" },
+            -- },
         },
         event = { "BufWritePost", "BufEnter" },
         config = function(_, opts)
