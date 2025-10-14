@@ -60,18 +60,18 @@ M.global_linters = {
 
 --- linters for specific filetypes
 M.linters_by_ft = {
-    sh = t("shellcheck"),
-    bash = t("shellcheck"),
+    sh = { t("shellcheck") },
+    bash = { t("shellcheck") },
 }
 
 --- formatters for specific filetypes
 M.formatters_by_ft = {
-    c = t("clang-format"),
-    cpp = t("clang-format"),
-    sh = t("shfmt"),
-    bash = t("shfmt"),
-    zsh = t("beautysh"),
-    tex = t("tex-fmt"),
+    c = { t("clang-format") },
+    cpp = { t("clang-format") },
+    sh = { t("shfmt") },
+    bash = { t("shfmt") },
+    zsh = { t("beautysh") },
+    tex = { t("tex-fmt") },
 }
 
 --- vim.lsp.enable lsp servers
