@@ -22,8 +22,8 @@ M.lsp_servers = {
     -- lua
     t("lua_ls", "lua-language-server"),
     -- python
-    -- t("pyrefly"),
-    t("basedpyright"),
+    t("pyrefly"),
+    -- t("basedpyright"),
     t("ruff"),
     -- c, c++
     t("clangd"),
