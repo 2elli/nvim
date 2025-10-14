@@ -9,7 +9,7 @@ M.mason_tools = {}
 ---@return string tool
 local tool_entry = function(tool, mason)
     mason = mason or tool
-    if not vim.tbl_contains(M.mason_tools, mason) then
+    if ~vim.tbl_contains(M.mason_tools, mason) then
         table.insert(M.mason_tools, mason)
     end
     return tool
