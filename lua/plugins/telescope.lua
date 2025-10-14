@@ -9,7 +9,6 @@ return {
         config = function()
             require("telescope").load_extension("fzf")  -- native fzf
             require("telescope").load_extension("persisted")  -- sessions
-            require("telescope").load_extension("fidget") -- notifications
         end,
         cmd = "Telescope",
         keys = {
