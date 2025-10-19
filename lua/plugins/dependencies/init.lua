@@ -18,6 +18,13 @@ return {
             picker = { enabled = true },
             -- input ui
             input = { enabled = true },
+            -- notification ui
+            notifier = { enabled = true },
+            -- style
+            styles = {
+                notification = { border = "single" },
+                input = { border = "single" },
+            },
         },
         config = function(_, opts)
             -- setup
