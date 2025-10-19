@@ -13,12 +13,10 @@ return {
             indent = { enable = true },
         },
     },
-    -- better comments
-    {
-        "folke/ts-comments.nvim",
-        opts = {},
-        event = "VeryLazy",
-    },
+    -- normal or block comment using motions
+    { "numToStr/Comment.nvim", opts = {}, event = "VeryLazy" },
+    -- better treesitter aware comments
+    { "folke/ts-comments.nvim", opts = {}, event = "VeryLazy" },
     -- create annotations with treesitter
     {
         "danymat/neogen",
