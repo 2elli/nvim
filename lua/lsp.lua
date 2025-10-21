@@ -66,8 +66,6 @@ M.linters_by_ft = {
 
 --- formatters for specific filetypes
 M.formatters_by_ft = {
-    c = { t("clang-format") },
-    cpp = { t("clang-format") },
     sh = { t("shfmt") },
     bash = { t("shfmt") },
     zsh = { t("beautysh") },
