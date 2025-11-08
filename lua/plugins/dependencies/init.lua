@@ -3,11 +3,11 @@ return {
     -- util library
     { "nvim-lua/plenary.nvim", priority = 1000 },
     -- icons
-    { "nvim-tree/nvim-web-devicons", opts = {}, priority = 999 },
+    { "nvim-tree/nvim-web-devicons", opts = {}, priority = 1000 },
     -- user utils
     {
         "folke/snacks.nvim",
-        priority = 998,
+        priority = 1000,
         lazy = false,
         opts = {
             -- indent lines
