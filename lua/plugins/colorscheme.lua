@@ -7,7 +7,7 @@ return {
             require("nightfox").setup({
                 options = { transparent = true },
             })
-            vim.cmd.colorscheme("carbonfox")
+            vim.cmd.colorscheme("duskfox")
         end,
     },
 }
