@@ -39,6 +39,8 @@ M.lsp_servers = {
     t("gopls"),
     -- zig
     t("zls"),
+    -- ocaml
+    t("ocamllsp", "ocaml-lsp"),
 
     -- typst
     t("tinymist"),
