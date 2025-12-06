@@ -72,6 +72,7 @@ M.formatters_by_ft = {
     bash = { t("shfmt") },
     zsh = { t("beautysh") },
     tex = { t("tex-fmt") },
+    ocaml = { t("ocamlformat") }
 }
 
 --- vim.lsp.enable lsp servers
