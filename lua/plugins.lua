@@ -31,9 +31,8 @@ vim.keymap.set("n", "<leader>gl", function() Snacks.picker.git_log() end, {desc 
 vim.keymap.set("n", "<leader>gb", function() Snacks.git.blame_line() end, {desc = "git blame"})
 
 -- files
-local oil = require("oil")
-oil.setup()
-vim.keymap.set("n", "<leader>e", function() oil.toggle_float() end, {desc = "open oil"})
+require("oil").setup()
+vim.keymap.set("n", "<leader>e", function() require("oil").toggle_float() end, {desc = "open oil"})
 
 require("nvim-treesitter.configs").setup({
     auto_install=true,
