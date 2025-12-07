@@ -2,47 +2,50 @@
 -- auto loaded in config/lazy.lua
 
 -- line numbers
-vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.o.nu = true
+vim.o.relativenumber = true
 
 -- tab and indent opts
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
 
 -- indents
-vim.opt.autoindent = true
-vim.opt.copyindent = true
-vim.opt.smartindent = true
+vim.o.autoindent = true
+vim.o.copyindent = true
+vim.o.smartindent = true
 
 -- no line wrapping
-vim.opt.wrap = false
+vim.o.wrap = false
 
 -- minimum num lines to keep around cursor
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 8
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
 
 -- search
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
 -- save + undo
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undofile = true
-vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+vim.o.swapfile = false
+vim.o.backup = false
+vim.o.undofile = true
+vim.o.undodir = vim.fn.stdpath("data") .. "/undodir"
 
 -- term defaults
-vim.opt.termguicolors = true
-vim.opt.background = "dark"
+vim.o.termguicolors = true
+vim.o.background = "dark"
 
 -- configure new splits
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.o.splitright = true
+vim.o.splitbelow = true
 
 -- session options
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- window border
+vim.o.winborder = "rounded"
 
 -- icons
 vim.diagnostic.config({
