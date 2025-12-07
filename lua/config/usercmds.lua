@@ -1,2 +1,0 @@
--- usercommands
--- auto loaded in config/lazy.lua

@@ -30,21 +30,4 @@ return {
             },
         },
     },
-    {
-        'windwp/nvim-autopairs',
-        event = "InsertEnter",
-        opts = {},
-    },
-    {
-        "chrisgrieser/nvim-scissors",
-        opts = {
-            snippetDir = vim.fn.expand(vim.fn.stdpath("config") .. "/snippets/"),
-            editSnippetPopup = { keymaps = { deleteSnippet = "<M-BS>" } },
-            jsonFormatter = "jq",
-        },
-        keys = {
-            { "<leader>se", function() require("scissors").editSnippet() end, desc = "Scissors: edit snippet" },
-            { "<leader>sa", function() require("scissors").addNewSnippet() end, mode = { "n", "v" }, desc = "Scissors: add new snippet" },
-        },
-    },
 }

@@ -39,8 +39,7 @@ require("lazy").setup({
 -- set defaults
 require("config.opts")
 require("config.keymaps")
-require("config.usercmds")
-require("config.autocmds")
+require("config.cmds")
 
 -- enable lsp servers
 require("lsp").enable_lsp_servers()

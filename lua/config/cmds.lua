@@ -1,4 +1,4 @@
--- autocommands
+-- usercmds and autocmds
 -- auto loaded in config/lazy.lua
 
 vim.api.nvim_create_autocmd("TextYankPost", {

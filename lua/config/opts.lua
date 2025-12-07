@@ -21,9 +21,11 @@ vim.opt.wrap = false
 
 -- minimum num lines to keep around cursor
 vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 
 -- search
 vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- save + undo
 vim.opt.swapfile = false
