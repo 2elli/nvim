@@ -2,5 +2,6 @@ vim.lsp.enable({
     "basedpyright",
     "ruff",
     "clangd",
-    "lua_ls"
+    "lua_ls",
+    "ocamllsp"
 })
