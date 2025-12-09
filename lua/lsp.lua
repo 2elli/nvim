@@ -3,5 +3,8 @@ vim.lsp.enable({
     "ruff",
     "clangd",
     "lua_ls",
-    "ocamllsp"
+    "ocamllsp",
+    "rust_analyzer",
+    "tinymist",
+    "ts_ls",
 })
