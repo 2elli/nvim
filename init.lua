@@ -7,10 +7,8 @@ vim.g.loaded_python3_provider = 0
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-require("config.cmds")
-require("config.keymaps")
-require("config.opts")
-
+require("opts")
+require("cmds")
+require("keymaps")
 require("plugins")
-
 require("lsp")
