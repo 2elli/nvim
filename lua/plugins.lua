@@ -39,6 +39,7 @@ vim.keymap.set("n", "<leader>gr", "<CMD>Gitsigns reset_hunk<CR>", { desc = "Gits
 -- fzf
 vim.keymap.set("n", "<leader>/", function() require("fzf-lua").live_grep_native() end, { desc = "fzf grep" })
 vim.keymap.set("n", "<leader>F", function() require("fzf-lua").files() end, { desc = "fzf grep" })
+vim.keymap.set("n", "<leader>k", function() require("fzf-lua").keymaps() end, { desc = "fzf grep" })
 
 -- lsp
 require("mason").setup()
