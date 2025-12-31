@@ -29,3 +29,6 @@ map("n", "<M-J>", "mzj:m .-2<CR>==J`z", { desc = "append current line to next" }
 
 -- netrw
 map("n", "<leader>e", "<CMD>Ex %:p:h<CR>", { desc = "open netrw" })
+
+-- format
+map("n", "<leader>lf", function() vim.lsp.buf.format() end, { desc = "lsp format" })
