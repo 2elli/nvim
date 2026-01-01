@@ -1,3 +1,4 @@
+-- lsp
 vim.lsp.enable({
     "basedpyright",
     "ruff",

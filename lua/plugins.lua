@@ -1,3 +1,4 @@
+-- plugins
 vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/EdenEast/nightfox.nvim" },

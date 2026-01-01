@@ -1,6 +1,4 @@
 -- keymaps
--- auto loaded in config/lazy.lua
-
 local map = vim.keymap.set
 
 -- no op leader key

@@ -1,5 +1,4 @@
 -- options
--- auto loaded in config/lazy.lua
 local o = vim.o
 
 -- line numbers
