@@ -8,6 +8,7 @@ vim.pack.add({
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/stevearc/conform.nvim" },
+    { src = "https://github.com/mfussenegger/nvim-lint" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
 })
 
@@ -54,3 +55,10 @@ require("conform").setup({
     },
 })
 vim.keymap.set({ "n", "x" }, "<leader>lf", function() require("conform").format() end, { desc = "conform format" })
+
+-- linting
+vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter" }, {
+    callback = function()
+        require("lint").try_lint("typos")
+    end,
+})
