@@ -7,6 +7,7 @@ vim.pack.add({
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/mason-org/mason.nvim" },
+    { src = "https://github.com/stevearc/conform.nvim" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
 })
 
@@ -42,6 +43,14 @@ vim.keymap.set("n", "<leader>/", function() require("fzf-lua").live_grep_native(
 vim.keymap.set("n", "<leader>F", function() require("fzf-lua").files() end, { desc = "fzf grep" })
 vim.keymap.set("n", "<leader>k", function() require("fzf-lua").keymaps() end, { desc = "fzf grep" })
 
--- lsp
+-- lsp servers
 require("mason").setup()
-vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end, { desc = "lsp format" })
+
+-- formatting
+require("conform").setup({
+    default_format_opts = { lsp_format = "fallback", async = true },
+    formatters_by_ft = {
+        rust = { "rustfmt" },
+    },
+})
+vim.keymap.set({ "n", "x" }, "<leader>lf", function() require("conform").format() end, { desc = "conform format" })
