@@ -10,6 +10,10 @@ vim.pack.add({
     { src = "https://github.com/stevearc/conform.nvim" },
     { src = "https://github.com/mfussenegger/nvim-lint" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
+    {
+        src = "https://github.com/saghen/blink.cmp",
+        version = vim.version.range("^1"),
+    },
 })
 
 -- colorscheme
@@ -61,4 +65,28 @@ vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter" }, {
     callback = function()
         require("lint").try_lint("typos")
     end,
+})
+
+-- autocomplete
+require("blink.cmp").setup({
+    signature = { enabled = true }, -- show signature help
+    completion = {
+        -- show lsp docs of option
+        documentation = { auto_show = true, auto_show_delay_ms = 500 },
+        -- list selection behavior
+        list = { selection = { preselect = false, auto_insert = false } },
+        -- menu appearance
+        -- menu = { draw = { columns = { { "label", "label_description", gap = 1 }, { "kind" }, { "kind_icon" } } } },
+    },
+    keymap = {
+        -- use default keys as base
+        preset = "default",
+        -- add "super-tab" like actions
+        ["<CR>"] = { "accept", "fallback" },
+        ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+        ["<S-Tab>"] = { "select_prev", "snippet_forward", "fallback" },
+        -- remap doc scroll so binds work with tmux
+        ["<C-u>"] = { "scroll_documentation_up", "fallback" },
+        ["<C-d>"] = { "scroll_documentation_down", "fallback" },
+    },
 })
