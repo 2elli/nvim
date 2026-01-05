@@ -46,9 +46,6 @@ o.splitbelow = true
 -- session options
 o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
--- window border
-o.winborder = "rounded"
-
 -- icons
 vim.diagnostic.config({
     signs = {
