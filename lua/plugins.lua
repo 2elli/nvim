@@ -71,12 +71,9 @@ vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter" }, {
 require("blink.cmp").setup({
     signature = { enabled = true }, -- show signature help
     completion = {
-        -- show lsp docs of option
         documentation = { auto_show = true, auto_show_delay_ms = 500 },
-        -- list selection behavior
-        list = { selection = { preselect = false, auto_insert = false } },
-        -- menu appearance
-        -- menu = { draw = { columns = { { "label", "label_description", gap = 1 }, { "kind" }, { "kind_icon" } } } },
+        list = { selection = { preselect = false, auto_insert = true } },
+        menu = { draw = { columns = { { "label", "label_description", gap = 1 }, { "kind" }, { "kind_icon" } } } },
     },
     keymap = {
         -- use default keys as base
