@@ -79,7 +79,6 @@ require("blink.cmp").setup({
         -- use default keys as base
         preset = "default",
         -- add "super-tab" like actions
-        ["<CR>"] = { "accept", "fallback" },
         ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
         ["<S-Tab>"] = { "select_prev", "snippet_forward", "fallback" },
         -- remap doc scroll so binds work with tmux
