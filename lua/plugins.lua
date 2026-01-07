@@ -3,6 +3,7 @@ vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/EdenEast/nightfox.nvim" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
+    { src = "https://github.com/stevearc/oil.nvim" },
     { src = "https://github.com/ThePrimeagen/harpoon", version = "harpoon2" },
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
@@ -32,6 +33,10 @@ vim.keymap.set("n", "<leader>f", function() require("harpoon").ui:toggle_quick_m
     { desc = "Harpoon: toggle quick menu" })
 vim.keymap.set("n", "<C-n>", function() require("harpoon"):list():next() end, { desc = "Harpoon: goto next mark" })
 vim.keymap.set("n", "<C-p>", function() require("harpoon"):list():prev() end, { desc = "Harpoon: goto previous mark" })
+
+-- explorer
+require("oil").setup()
+vim.keymap.set("n", "<leader>e", function() require("oil").toggle_float() end, { desc = "Oil: toggle float" })
 
 -- git
 require("gitsigns").setup()
