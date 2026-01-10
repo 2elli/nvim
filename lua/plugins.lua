@@ -1,19 +1,26 @@
 -- plugins
 vim.pack.add({
+    -- deps
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/EdenEast/nightfox.nvim" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
+    -- files
     { src = "https://github.com/stevearc/oil.nvim" },
     { src = "https://github.com/ThePrimeagen/harpoon", version = "harpoon2" },
+    -- git
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
+    -- lsp
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/stevearc/conform.nvim" },
-    { src = "https://github.com/ibhagwan/fzf-lua" },
     {
         src = "https://github.com/saghen/blink.cmp",
         version = vim.version.range("^1"),
     },
+    -- fzf
+    { src = "https://github.com/ibhagwan/fzf-lua" },
+    -- writing
+    { src = "https://github.com/chomosuke/typst-preview.nvim" },
 })
 
 -- colorscheme
@@ -83,3 +90,12 @@ require("blink.cmp").setup({
         ["<C-d>"] = { "scroll_documentation_down", "fallback" },
     },
 })
+
+-- writing
+vim.api.nvim_create_user_command("TypstPreview",
+    function()
+        require("typst-preview").setup({})
+        vim.cmd.TypstPreview()
+    end,
+    { desc = "run typst preview" }
+)
