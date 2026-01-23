@@ -21,7 +21,11 @@ vim.pack.add({
     { src = "https://github.com/ibhagwan/fzf-lua" },
     -- writing
     { src = "https://github.com/chomosuke/typst-preview.nvim" },
+    -- rocq
+    { src = "https://github.com/whonore/Coqtail" },
 })
+
+local map = vim.keymap.set
 
 -- colorscheme
 require("nightfox").setup({ options = { transparent = true } })
@@ -99,3 +103,13 @@ vim.api.nvim_create_user_command("TypstPreview",
     end,
     { desc = "run typst preview" }
 )
+
+-- rocq
+-- dont use default maps
+vim.g.coqtail_nomap = 1
+map("n", "<leader>cc", "<cmd>RocqStart<cr>", { desc = "Rocq: Launch coqtail in current buf" })
+map("n", "<leader>cq", "<cmd>RocqStop<cr>", { desc = "Rocq: Stop coqtail in current buf" })
+map("n", "<leader>cj", "<cmd>RocqNext<cr>", { desc = "Rocq: Send next sentence" })
+map("n", "<leader>ck", "<cmd>RocqUndo<cr>", { desc = "Rocq: Step back 1 sentence" })
+map("n", "<leader>cl", "<cmd>RocqToLine<cr>", { desc = "Rocq: Send all sentences up to line" })
+map("n", "<leader>cL", "<cmd>RocqToLine<cr>", { desc = "Rocq: Send all sentences" })
