@@ -13,6 +13,7 @@ vim.pack.add({
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/stevearc/conform.nvim" },
+    { src = "https://github.com/mfussenegger/nvim-lint" },
     {
         src = "https://github.com/saghen/blink.cmp",
         version = vim.version.range("^1"),
@@ -74,6 +75,21 @@ require("conform").setup({
     },
 })
 map({ "n", "x" }, "<leader>lf", function() require("conform").format() end, { desc = "conform format" })
+
+-- linters
+local global_linters = { "typos" }
+require("lint").linters_by_ft = {
+    c = { "clangtidy" },
+    cpp = { "clangtidy" },
+}
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+    callback = function()
+        require("lint").try_lint()
+        for _, linter in ipairs(global_linters) do
+            require("lint").try_lint(linter)
+        end
+    end,
+})
 
 -- autocomplete
 require("blink.cmp").setup({
