@@ -27,3 +27,7 @@ map("n", "<M-J>", "mzj:m .-2<CR>==J`z", { desc = "append current line to next" }
 
 -- format
 map("n", "<leader>lf", function() vim.lsp.buf.format() end, { desc = "lsp format" })
+
+-- diagnostics
+map("n", "<leader>dd", function() vim.diagnostic.setqflist() end, { desc = "Diagnostics: workspace" })
+map("n", "<leader>dl", function() vim.diagnostic.setloclist() end, { desc = "Diagnostics: workspace" })
