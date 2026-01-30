@@ -93,6 +93,7 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 
 -- autocomplete
 require("blink.cmp").setup({
+    sources = { default = {"lsp", "path" } },
     signature = { enabled = true }, -- show signature help
     completion = {
         documentation = { auto_show = true, auto_show_delay_ms = 500 },
