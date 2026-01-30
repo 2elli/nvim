@@ -60,9 +60,9 @@ map("n", "<leader>gp", "<CMD>Gitsigns prev_hunk<CR>", { desc = "Gitsigns: goto p
 map("n", "<leader>gr", "<CMD>Gitsigns reset_hunk<CR>", { desc = "Gitsigns: reset hunk" })
 
 -- fzf
-map("n", "<leader>/", function() require("fzf-lua").live_grep_native() end, { desc = "fzf grep" })
-map("n", "<leader>F", function() require("fzf-lua").files() end, { desc = "fzf grep" })
-map("n", "<leader>k", function() require("fzf-lua").keymaps() end, { desc = "fzf grep" })
+map("n", "<leader>/", function() require("fzf-lua").live_grep_native() end, { desc = "fzf live grep" })
+map("n", "<leader>F", function() require("fzf-lua").files() end, { desc = "fzf find files" })
+map("n", "<leader>k", function() require("fzf-lua").keymaps() end, { desc = "fzf grep keymap" })
 
 -- lsp servers
 require("mason").setup()
