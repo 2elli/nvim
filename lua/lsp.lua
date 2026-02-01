@@ -8,4 +8,5 @@ vim.lsp.enable({
     "rust_analyzer",
     "tinymist",
     "ts_ls",
+    "hls"
 })

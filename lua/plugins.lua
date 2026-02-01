@@ -72,6 +72,7 @@ require("conform").setup({
     default_format_opts = { lsp_format = "fallback", async = true },
     formatters_by_ft = {
         rust = { "rustfmt" },
+        haskell = { "fourmolu" }
     },
 })
 map({ "n", "x" }, "<leader>lf", function() require("conform").format() end, { desc = "conform format" })
@@ -81,6 +82,7 @@ local global_linters = { "typos" }
 require("lint").linters_by_ft = {
     c = { "clangtidy" },
     cpp = { "clangtidy" },
+    haskell = { "hlint" },
 }
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     callback = function()
