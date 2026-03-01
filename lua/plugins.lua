@@ -65,15 +65,13 @@ map("n", "<leader>?", function() require("fzf-lua").live_grep_native() end, { de
 map("n", "<leader>F", function() require("fzf-lua").files() end, { desc = "fzf find files" })
 map("n", "<leader>k", function() require("fzf-lua").keymaps() end, { desc = "fzf grep keymap" })
 
--- lsp servers
-require("mason").setup()
-
 -- formatting
 require("conform").setup({
     default_format_opts = { lsp_format = "fallback", async = true },
     formatters_by_ft = {
         rust = { "rustfmt" },
-        haskell = { "fourmolu" }
+        haskell = { "fourmolu" },
+        nix = { "nixfmt" },
     },
 })
 map({ "n", "x" }, "<leader>lf", function() require("conform").format() end, { desc = "conform format" })
