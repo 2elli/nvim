@@ -1,6 +1,3 @@
--- exrc
-vim.opt.exrc = true
-
 -- leader keys
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
