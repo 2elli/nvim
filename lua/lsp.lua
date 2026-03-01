@@ -9,5 +9,5 @@ vim.lsp.enable({
     "tinymist",
     "ts_ls",
     "hls",
-    "nil",
+    "nil_ls",
 })
