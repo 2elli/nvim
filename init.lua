@@ -7,4 +7,6 @@ require("cmds")
 require("keymaps")
 require("plugins")
 require("lsp")
-vim.opt.runtimepath:append("/usr/share/vim/vimfiles")
+
+local vf = "/usr/share/vim/vimfiles"
+if vim.fn.isdirectory(vf) then vim.opt.runtimepath:append(vf) end
