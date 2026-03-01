@@ -1,9 +1,9 @@
 -- plugins
 vim.pack.add({
-    -- deps
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/EdenEast/nightfox.nvim" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
+    { src = "https://github.com/ibhagwan/fzf-lua" },
     -- files
     { src = "https://github.com/stevearc/oil.nvim" },
     { src = "https://github.com/ThePrimeagen/harpoon", version = "harpoon2" },
@@ -14,17 +14,16 @@ vim.pack.add({
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/stevearc/conform.nvim" },
     { src = "https://github.com/mfussenegger/nvim-lint" },
-    {
-        src = "https://github.com/saghen/blink.cmp",
-        version = vim.version.range("^1"),
-    },
-    -- fzf
-    { src = "https://github.com/ibhagwan/fzf-lua" },
+    { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
+})
+
+-- unloaded plugins
+vim.pack.add({
     -- writing
     { src = "https://github.com/chomosuke/typst-preview.nvim" },
     -- rocq
     { src = "https://github.com/whonore/Coqtail" },
-})
+}, { load = false })
 
 local map = vim.keymap.set
 
