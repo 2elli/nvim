@@ -19,17 +19,3 @@ vim.api.nvim_create_user_command(
 )
 
 vim.api.nvim_create_user_command("PackUpdate", function() vim.pack.update() end, {})
-vim.api.nvim_create_user_command(
-    "PackClean",
-    function()
-        local inactive = {}
-        for _, p in ipairs(vim.pack.get()) do
-            if not p.active then table.insert(inactive, p.spec.name) end
-        end
-        if #inactive > 0 then
-            vim.pack.del(inactive)
-            vim.print("Removed " .. table.concat(inactive, ", "))
-        end
-    end,
-    {}
-)
