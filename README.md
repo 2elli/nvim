@@ -2,7 +2,8 @@
 minimal config using v0.12 features
 
 ### nix
-The nix flake contains some of the dependant packages for this config. Especially important packages are installed with emerge or use flags (like rust).
+The nix flake contains some of the dependant packages for this config. Some packages are nit in the flake because I install them
+on my host (rust tools).
 So the nix flake does not contain everything needed to use this config.
 
 ### dependencies
@@ -11,8 +12,9 @@ So the nix flake does not contain everything needed to use this config.
 neovim
 git
 fzf
-ripgrep 
+ripgrep
 fd
+tree-sitter-cli
 
 # lsp
 basedpyright
