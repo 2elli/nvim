@@ -2,9 +2,8 @@
 minimal config using v0.12 features
 
 ### nix
-The nix flake contains some of the dependant packages for this config. Some packages are nit in the flake because I install them
-on my host (rust tools).
-So the nix flake does not contain everything needed to use this config.
+The nix flake contains some of the dependant packages for this config. Some packages are not in the flake because I install them
+with my host package manager (rust tools installed with use flags on gentoo).
 
 ### dependencies
 
