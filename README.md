@@ -1,11 +1,9 @@
 ## v0.12 config
 minimal config using v0.12 features
 
-### nix
-The nix flake contains some of the dependant packages for this config. Some packages are not in the flake because I install them
-with my host package manager (rust tools installed with use flags on gentoo).
-
 ### dependencies
+The nix flake contains some of the packages (lsps, formatters, linters) for this config. Some packages are not in the flake because I install them
+with my host package manager (ex. rust tools are already installed with use flags on gentoo).
 
 ```bash
 neovim
