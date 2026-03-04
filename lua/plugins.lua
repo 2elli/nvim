@@ -2,7 +2,7 @@
 vim.pack.add({
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/EdenEast/nightfox.nvim" },
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" },
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
     -- files
     { src = "https://github.com/stevearc/oil.nvim" },
@@ -27,9 +27,7 @@ require("nightfox").setup({ options = { transparent = true } })
 vim.cmd.colorscheme("nightfox")
 
 -- treesitter
-require("nvim-treesitter.configs").setup({
-    auto_install = true,
-})
+require("treesitter").setup()
 
 -- quick files
 require("harpoon"):setup()
