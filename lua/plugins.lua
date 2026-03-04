@@ -14,15 +14,11 @@ vim.pack.add({
     { src = "https://github.com/stevearc/conform.nvim" },
     { src = "https://github.com/mfussenegger/nvim-lint" },
     { src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
-})
-
--- unloaded plugins
-vim.pack.add({
     -- writing
     { src = "https://github.com/chomosuke/typst-preview.nvim" },
     -- rocq
     { src = "https://github.com/whonore/Coqtail" },
-}, { load = false })
+})
 
 local map = vim.keymap.set
 
@@ -110,3 +106,6 @@ require("blink.cmp").setup({
         ["<C-d>"] = { "scroll_documentation_down", "fallback" },
     },
 })
+
+-- rocq, dont use default keymaps
+vim.g.coqtail_nomap = 1
