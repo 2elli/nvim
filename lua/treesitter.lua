@@ -39,11 +39,11 @@ M.setup = function()
         callback = function(args)
             local buf, filetype = args.buf, args.match
             local lang = vim.treesitter.language.get_lang(filetype)
-            if not lang then
+            if not lang then return end
+            if not vim.treesitter.language.add(lang) then
                 vim.print("Treesitter lang " .. lang .. " missing")
                 return
             end
-            if not vim.treesitter.language.add(lang) then return end
             vim.treesitter.start(buf, lang)
             vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
         end,
