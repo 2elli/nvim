@@ -16,7 +16,6 @@ o.expandtab = true
 -- indents
 o.autoindent = true
 o.copyindent = true
-o.smartindent = true
 
 -- no line wrapping
 o.wrap = false
