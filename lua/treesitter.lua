@@ -33,13 +33,17 @@ M.parsers = {
     "zig",
 }
 
+M.ignored_langs = {
+    "oil",
+}
+
 M.setup = function()
     require("nvim-treesitter").install(M.parsers)
     vim.api.nvim_create_autocmd("FileType", {
         callback = function(args)
             local buf, filetype = args.buf, args.match
             local lang = vim.treesitter.language.get_lang(filetype)
-            if not lang then return end
+            if not lang or vim.tbl_contains(M.ignored_langs, lang) then return end
             if not vim.treesitter.language.add(lang) then
                 vim.print("Treesitter lang " .. lang .. " missing")
                 return
