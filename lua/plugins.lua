@@ -38,7 +38,12 @@ map("n", "<C-n>", function() require("harpoon"):list():next() end, { desc = "Har
 map("n", "<C-p>", function() require("harpoon"):list():prev() end, { desc = "Harpoon: goto previous mark" })
 
 -- explorer
-require("oil").setup({ keymaps = { ["<ESC>"] = { "actions.close" } } })
+require("oil").setup({
+    keymaps = {
+        ["<ESC>"] = { "actions.close" },
+        ["g."] = { "actions.toggle_hidden" },
+    }
+})
 map("n", "<leader>e", function() require("oil").toggle_float() end, { desc = "Oil: toggle float" })
 
 -- git
