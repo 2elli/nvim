@@ -26,5 +26,5 @@ map("n", "J", "mzJ`z", { desc = "append next line to current" })
 map("n", "<M-J>", "mzj:m .-2<CR>==J`z", { desc = "append current line to next" })
 
 -- diagnostics
-map("n", "<leader>dd", function() vim.diagnostic.setqflist() end, { desc = "Diagnostics: workspace" })
-map("n", "<leader>dl", function() vim.diagnostic.setloclist() end, { desc = "Diagnostics: file" })
+map("n", "<leader>dD", function() vim.diagnostic.setqflist() end, { desc = "Diagnostics: workspace" })
+map("n", "<leader>dd", function() vim.diagnostic.setloclist() end, { desc = "Diagnostics: file" })
