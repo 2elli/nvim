@@ -22,6 +22,7 @@ M.parsers = {
     "ocaml",
     "python",
     "rust",
+    "sql",
     "ssh_config",
     "tmux",
     "toml",
