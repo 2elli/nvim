@@ -10,5 +10,4 @@ vim.lsp.enable({
     "ts_ls",
     "hls",
     "nixd",
-    "asm-lsp",
 })
