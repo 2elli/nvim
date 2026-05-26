@@ -1,7 +1,7 @@
 -- plugins
 vim.pack.add({
+    { src = "https://github.com/slugbyte/lackluster.nvim" },
     { src = "https://github.com/nvim-lua/plenary.nvim" },
-    { src = "https://github.com/EdenEast/nightfox.nvim" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
     -- files
@@ -21,8 +21,11 @@ vim.pack.add({
 local map = vim.keymap.set
 
 -- colorscheme
-require("nightfox").setup({ options = { transparent = true } })
-vim.cmd.colorscheme("nightfox")
+require("lackluster").setup({
+    tweak_background = { normal = "none" },
+    tweak_color = { lack = "#ffdfff" },
+})
+vim.cmd.colorscheme("lackluster")
 
 -- treesitter
 require("treesitter").setup()
