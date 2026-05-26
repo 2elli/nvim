@@ -43,7 +43,7 @@ require("oil").setup({
     keymaps = {
         ["<ESC>"] = { "actions.close" },
         ["g."] = { "actions.toggle_hidden" },
-    }
+    },
 })
 map("n", "<leader>e", function() require("oil").toggle_float() end, { desc = "Oil: toggle float" })
 

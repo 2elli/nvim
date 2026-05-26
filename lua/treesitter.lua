@@ -36,6 +36,7 @@ M.parsers = {
 
 M.ignored_langs = {
     "oil",
+    "harpoon",
 }
 
 M.setup = function()
