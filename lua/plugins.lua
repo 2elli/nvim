@@ -2,7 +2,6 @@
 vim.pack.add({
     { src = "https://github.com/slugbyte/lackluster.nvim" },
     { src = "https://github.com/nvim-lua/plenary.nvim" },
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
     -- files
     { src = "https://github.com/stevearc/oil.nvim" },
@@ -26,9 +25,6 @@ require("lackluster").setup({
     tweak_color = { lack = "#ffdfff" },
 })
 vim.cmd.colorscheme("lackluster")
-
--- treesitter
-require("treesitter").setup()
 
 -- quick files
 require("harpoon"):setup()
