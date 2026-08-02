@@ -23,7 +23,7 @@ local map = vim.keymap.set
 -- colorscheme
 require("lackluster").setup({
     tweak_background = { normal = "none" },
-    tweak_color = { lack = "#ffdfff" },
+    tweak_color = { lack = "#ffefff" },
 })
 vim.cmd.colorscheme("lackluster")
 
