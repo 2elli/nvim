@@ -114,3 +114,6 @@ require("blink.cmp").setup({
         ["<C-d>"] = { "scroll_documentation_down", "fallback" },
     },
 })
+
+-- undo tree
+vim.cmd.packadd("nvim.undotree")
