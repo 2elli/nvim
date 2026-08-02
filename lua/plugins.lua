@@ -3,6 +3,7 @@ vim.pack.add({
     { src = "https://github.com/slugbyte/lackluster.nvim" },
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/ibhagwan/fzf-lua" },
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
     -- files
     { src = "https://github.com/stevearc/oil.nvim" },
     { src = "https://github.com/ThePrimeagen/harpoon", version = "harpoon2" },
@@ -25,6 +26,13 @@ require("lackluster").setup({
     tweak_color = { lack = "#ffdfff" },
 })
 vim.cmd.colorscheme("lackluster")
+
+-- treesitter
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { '<filetype>' },
+    callback = function() vim.treesitter.start() end,
+})
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 
 -- quick files
 require("harpoon"):setup()
